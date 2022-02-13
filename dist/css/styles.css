@@ -1,0 +1,529 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Montserrat:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f5f0ed;
+  margin: auto 1rem;
+}
+
+.navbar .nav-links li:nth-of-type(1), .navbar .nav-links li:nth-of-type(2), .navbar .nav-links li:nth-of-type(3), .navbar .nav-links li:nth-of-type(4), .navbar .nav-links li:nth-of-type(5) {
+  opacity: 0;
+  transition: 0.3s ease-in all;
+}
+
+.navbar .nav-links li.nav-link-open:nth-of-type(1), .navbar .nav-links li.nav-link-open:nth-of-type(2), .navbar .nav-links li.nav-link-open:nth-of-type(3), .navbar .nav-links li.nav-link-open:nth-of-type(4), .navbar .nav-links li.nav-link-open:nth-of-type(5) {
+  opacity: 1;
+  transform: translateY(10px);
+}
+
+.navbar .nav-links li a::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 0%;
+  background-color: #000;
+  left: 0;
+  border-radius: 2px;
+  transition: 0.3s ease all;
+}
+
+.burger {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: black;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+}
+
+.burger i:nth-of-type(1) {
+  display: block;
+}
+
+.burger i:nth-of-type(2) {
+  display: none;
+}
+
+.burger.burger-open {
+  color: #000;
+}
+
+.burger.burger-open i:nth-of-type(1) {
+  display: none;
+}
+
+.burger.burger-open i:nth-of-type(2) {
+  display: block;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #eadfdd;
+  clip-path: circle(0px at 0 0px);
+  transition: 0.5s ease all;
+  z-index: 1;
+}
+
+.navbar .nav-links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar .nav-links li {
+  list-style-type: none;
+  margin: 3rem 0;
+}
+
+.navbar .nav-links li:nth-of-type(1).nav-link-open {
+  transition-delay: 0.25s;
+}
+
+.navbar .nav-links li:nth-of-type(2).nav-link-open {
+  transition-delay: 0.35s;
+}
+
+.navbar .nav-links li:nth-of-type(3).nav-link-open {
+  transition-delay: 0.45s;
+}
+
+.navbar .nav-links li:nth-of-type(4).nav-link-open {
+  transition-delay: 0.55s;
+}
+
+.navbar .nav-links li:nth-of-type(5).nav-link-open {
+  transition-delay: 0.65s;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar .nav-links li a::after {
+  bottom: -5px;
+}
+
+.navbar .nav-links li a:hover::after {
+  width: 100%;
+}
+
+.navbar.nav-open {
+  display: block;
+  clip-path: circle(100%);
+}
+
+.landing-page {
+  background: linear-gradient(#00000056, #0000005e), url("../../assets/simran1.jpg");
+  background-color: #eadfdd;
+  background-size: cover;
+  background-position: center;
+  margin: auto -1rem;
+  height: 45em;
+  display: grid;
+  place-items: center;
+  grid-template-rows: 27em 15em;
+  color: white;
+}
+
+.landing-page img {
+  width: 100%;
+}
+
+.landing-page .logo {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  margin-top: 0;
+  width: 3em;
+}
+
+.landing-page h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.landing-page h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.landing-page div:nth-of-type(1) {
+  place-self: end center;
+}
+
+.landing-page div {
+  place-self: end;
+}
+
+.landing-page div p {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  text-align: center;
+  padding: 0 2em;
+}
+
+.headingg h1 {
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
+  color: #eadfdd;
+}
+
+.headingg p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin-top: -40px;
+  margin-left: 20px;
+}
+
+.pg2 div {
+  margin-bottom: 1em;
+}
+
+.pg2 img {
+  object-fit: cover;
+  width: 100%;
+  height: 10em;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.pg2 p {
+  display: block;
+  margin: auto 0% auto auto;
+  font-family: "Montserrat", sans-serif;
+  align-items: flex-end;
+  width: fit-content;
+  background-image: white;
+  color: black;
+  padding: 0.3em;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.services {
+  position: relative;
+  display: flex;
+  margin-bottom: 4em;
+}
+
+.services img {
+  object-fit: cover;
+  width: 70%;
+  height: 15em;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.services .boxy {
+  background: #eadfdd;
+  width: 10em;
+  height: fit-content;
+  position: absolute;
+  right: 0;
+  top: 60%;
+}
+
+.services .boxy h1 {
+  padding: 0.7em;
+  text-align: right;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #fff;
+  width: fit-content;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2em;
+}
+
+.services .boxy ul {
+  list-style-type: circle;
+  font-family: "Montserrat", sans-serif;
+}
+
+.services:nth-child(even) {
+  justify-content: end;
+}
+
+.services:nth-child(even) .boxy {
+  right: auto;
+  left: 0;
+}
+
+.book div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #eadfdd;
+  background: linear-gradient(-90deg, #dab097 25%, #eadfdd 20%);
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  text-align: right;
+  padding: 0.7em;
+  margin-bottom: 1em;
+}
+
+.book div h1 {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  color: #f5f0ed;
+  border: 3px solid #f5f0ed;
+}
+
+.book div p {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+.booking {
+  margin: auto -1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #000000;
+  background: linear-gradient(#8f064f6b, #b9067e69), url("../../assets/img2.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.booking p {
+  font-size: 0.8em;
+}
+
+.booking h1 {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  color: rgba(29, 28, 28, 0.89);
+}
+
+.booking div p {
+  font-size: 1em;
+}
+
+.booking div h1 {
+  font-size: 2em;
+  color: #fff;
+}
+
+.bttn {
+  display: block;
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+  padding: 0.5em 1em;
+  border: 1px solid #eadfdd;
+  background: #00000000;
+  color: #eadfdd;
+  width: 80%;
+  margin-bottom: 1em;
+}
+
+.bttn:hover {
+  background: #eadfdd;
+  color: #000;
+  transition: 0.4s;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.about img {
+  border-radius: 50% 0;
+  border: 10px solid #eadfdd;
+}
+
+.form__group {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  padding: 1em 0 0;
+  margin-top: 10px;
+  margin: 2em;
+  margin-left: 0;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #d2d2d2;
+  outline: 0;
+  font-size: 16px;
+  color: #000000;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 16px;
+  cursor: text;
+  top: 20px;
+}
+
+label,
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 12px;
+  color: #fff;
+}
+
+.form__field:focus ~ .form__label {
+  color: #dab097;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  border-bottom: 2px solid #dab097;
+}
+
+.booking1 {
+  margin: auto -1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #000000;
+  background: linear-gradient(#8f064f4b, #b9067d40), url("../../assets/DSC05130.JPG");
+  background-size: cover;
+  background-position: center;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.booking1 p {
+  font-size: 0.8em;
+}
+
+.booking1 h1 {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  color: rgba(29, 28, 28, 0.89);
+  margin-top: 1em;
+}
+
+.booking1 div p {
+  font-size: 1em;
+}
+
+.booking1 div h1 {
+  font-size: 2em;
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #eadfdd;
+  margin: auto -1em;
+  font-family: "Montserrat", sans-serif;
+  padding: 1em;
+}
+
+footer div {
+  align-self: start;
+  margin-bottom: 1em;
+}
+
+footer div a {
+  color: #dab097;
+}
+
+footer div h1 {
+  font-family: "Playfair Display", serif;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid #dab097;
+  width: fit-content;
+  margin-bottom: 0.7em;
+}
+
+footer div img {
+  width: 10%;
+}
+
+footer .line {
+  border-bottom: 1px solid #000;
+}
+
+footer a {
+  color: #dab097;
+}
+
+footer .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+footer .social i:hover {
+  cursor: pointer;
+  color: #dab097;
+}
+
+hr.new5 {
+  border: 1px solid #dab097;
+  border-radius: 5px;
+  width: 90%;
+  margin-bottom: 1em;
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+/*# sourceMappingURL=styles.css.map */
